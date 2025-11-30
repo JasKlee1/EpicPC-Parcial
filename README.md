@@ -13,7 +13,7 @@ Tener MySQL corriendo para que pueda conectarse a la base de datos.
 
 Pasos de Ejecución:
 Clonar el Repositorio
-  git clone 
+git clone https://github.com/JasKlee1/EpicPC-Parcial
 
 Acceder al Directorio del Backend:
 cd [Nombre del Proyecto]/backend 
