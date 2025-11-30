@@ -1,0 +1,111 @@
+/* Productos home */
+#productos-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Más espacio entre tarjetas para que respiren */
+  justify-content: center;
+  padding: 20px 0; /* Añadir padding vertical al contenedor */
+}
+
+.tarjeta-producto{
+  /* USAMOS EL FONDO OSCURO DEFINIDO ANTES */
+  background-color: var(--color-tarjeta-fondo); 
+  color: var(--color-tarjeta-texto); /* Texto blanco */
+  text-align: center;
+  padding: 20px; /* Más padding para más cuerpo */
+  width: 300px; /* Definimos un ancho fijo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra inicial sutil y oscura */
+  border-radius: 10px; /* Bordes más redondeados, más modernos */
+  transition: all 300ms ease-in-out; /* Transición más suave y lenta */
+  
+  /* Borde sutil del color de acento */
+  border: 1px solid var(--color-acento-claro); 
+  
+  /* Aseguramos que el contenido esté alineado */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarjeta-producto:hover{
+  /* Efecto de elevación más dramático */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
+  transform: translateY(-8px); /* Elevación */
+  
+  /* Resaltar el borde con el color de acento al pasar el ratón */
+  border: 1px solid var(--color-acento); 
+}
+
+.tarjeta-producto img{
+  max-width: 100%;
+  height: auto; /* Dejamos que la altura sea automática */
+  aspect-ratio: 1.25; /* Proporción más ancha (1.25:1) */
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px; /* Espacio después de la imagen */
+}
+
+/* Estilos para los textos dentro de la tarjeta */
+.tarjeta-producto h3 {
+    color: var(--color-acento); /* Títulos en color acento */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.precio{
+  font-weight: 700;
+  font-size: 1.5em; /* Precio más grande */
+  color: var(--color-tarjeta-texto); /* Mantenemos el blanco */
+  margin: 15px 0;
+}
+
+.tarjeta-producto button{
+  /* Reutilizamos los estilos base de button, pero ajustamos el tamaño */
+  font-size: 1.1em;
+  padding: 10px 20px; /* Más padding para que se vea más robusto */
+  width: 100%; /* Botón de ancho completo */
+  margin-top: auto; /* Asegura que el botón esté al fondo */
+}
+
+/* Un toque extra para los botones dentro de la tarjeta */
+.tarjeta-producto button:hover {
+    box-shadow: 0 0 10px var(--color-acento); /* Brillo al pasar el ratón */
+}
+
+/* ESTILOS PARA BOTONES DE FILTRO*/
+#filtros-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-categoria {
+    background-color: var(--color-acento);
+    color: white;
+    border: 1px solid var(--color-acento);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hover general */
+.btn-categoria:hover {
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-acento);
+    box-shadow: 0 0 10px var(--color-acento);
+}
+
+/* Botón activo (seleccionado) */
+.btn-categoria.active {
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-acento);
+    border: 1px solid var(--color-acento);
+    box-shadow: 0 0 12px var(--color-acento);
+    transform: scale(1.05);
+}

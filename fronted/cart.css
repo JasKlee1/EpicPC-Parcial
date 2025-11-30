@@ -1,0 +1,100 @@
+/* Contenedor principal: Más ancho para mejor visualización */
+#cart-container{
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilo de Tarjeta de Producto (Dark Mode) */
+.tarjeta-producto{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  /* Aplica el estilo dark establecido en style.css */
+  background-color: var(--color-tarjeta-fondo); 
+  color: var(--color-tarjeta-texto);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.tarjeta-producto img{
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.tarjeta-producto h3{
+  width: 150px;
+  color: var(--color-acento);
+}
+
+/* Controles de cantidad: Más claros */
+.tarjeta-producto .controles-cantidad{
+  /* Separamos los controles a la derecha */
+  margin-left: auto; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tarjeta-producto .controles-cantidad button {
+    /* Botones más pequeños para los controles */
+    padding: 5px 10px; 
+    font-size: 1.1em;
+}
+
+/* Totales: Diseño limpio y destacado */
+#totales{
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid var(--color-gris-claro-fondo);
+  border-radius: 8px;
+  background-color: var(--color-gris-claro-fondo);
+  text-align: right;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#totales h4{
+  font-size: 1.2em;
+  color: var(--color-gris-oscuro);
+  margin: 10px 0;
+}
+
+#totales h4 span {
+    font-weight: bold;
+    color: var(--color-acento);
+    font-size: 1.3em;
+}
+
+.totales-botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    gap: 10px;
+}
+
+/* Estilo para el botón secundario (Reiniciar) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-gris-oscuro);
+    border: 1px solid var(--color-gris-oscuro);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-fondo-claro);
+}
+
+/* Carrito Vacío: Estilo de mensaje de alerta */
+#carrito-vacio{
+  text-align: center;
+  padding: 50px;
+  color: var(--color-gris-oscuro);
+  font-size: 1.4em;
+}

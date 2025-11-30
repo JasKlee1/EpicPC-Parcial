@@ -1,0 +1,181 @@
+:root{
+  /* COLOR DE ACENTO: Azul Eléctrico (Vibrante y Gamer) */
+  --color-acento: #00A3FF; 
+  --color-acento-claro: #00A3FF33;
+
+  /* FONDOS Y TEXTO BASE: Estética limpia y de alto contraste */
+  --color-texto: #1a1a1a; /* Negro suave para el fondo claro */
+  --color-fondo-claro: #ffffff;
+  --color-gris-claro-fondo: #f7f7f7; /* Gris muy claro para el footer */
+
+  /* COLORES ESPECÍFICOS PARA ESTÉTICA GAMER */
+  --color-gris-oscuro: #333333; /* Para hover de botones */
+  --color-tarjeta-fondo: #1e2023; /* Gris oscuro / Azul profundo para tarjetas */
+  --color-tarjeta-texto: white; /* Texto blanco para asegurar contraste en tarjetas */
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--color-fondo-claro);
+  color: var(--color-texto);
+}
+
+h3, p{
+  margin: 6px 0;
+}
+
+h1{
+  text-align: initial; 
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-texto)
+}
+
+/* Enlaces: Resaltar en azul eléctrico al pasar el ratón */
+a:hover:not(#cart){
+  color: var(--color-acento);
+}
+
+/* Botones: Fondo azul eléctrico, transición suave, hover y active */
+button{
+  background-color: var(--color-acento);
+  color: white;
+  padding: 8px 15px; 
+  border: unset;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease; 
+  transform: scale(1); /* Base para el efecto active */
+}
+
+button:hover{
+  background-color: var(--color-gris-oscuro); 
+  color: var(--color-acento); 
+  border: 1px solid var(--color-acento);
+}
+
+/* NUEVO: Estado Activo (Al hacer clic) */
+button:active {
+  background-color: var(--color-tarjeta-fondo); /* Fondo oscuro */
+  color: var(--color-acento); /* Texto azul */
+  transform: scale(0.98); /* Ligera reducción para simular el click */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4) inset; /* Sombra interior */
+}
+
+/* Header: Fondo claro con sombra sutil */
+header{
+  background-color: var(--color-fondo-claro);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin-bottom: 20px; 
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 60px;
+  align-items: center; 
+}
+
+.banner-title {
+  /* Centrado robusto del título */
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.banner-title h1 {
+  margin: 0; 
+  font-size: 1.8em; 
+  color: var(--color-acento); 
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+header nav div{
+  display: flex;
+  align-items: center;
+  gap: 0; 
+  position: relative;
+}
+
+/* Logo: Tamaño grande y sombra para destacar */
+#logo{
+  height: 85px; 
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4)); 
+}
+
+header nav img{
+  height: 25px;
+}
+
+/* Número del carrito: Fondo azul */
+#cuenta-carrito{
+  background-color: var(--color-acento);
+  color: white;
+  border-radius: 100%;
+  display: inline-block;
+  width: 20px;
+  line-height: 20px;
+  aspect-ratio: 1;
+  text-align: center;
+  position: absolute;
+  top: -10px; 
+  right: -10px;
+  font-weight: bold;
+  font-size: 0.8em;
+  box-shadow: 0 0 5px var(--color-acento);
+}
+
+/* Footer: */
+footer{
+  margin-top: auto;
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px 0;
+  background-color: var(--color-gris-claro-fondo);
+  color: var(--color-gris-oscuro);
+  font-size: 0.9em;
+}
+
+footer a {
+  color: var(--color-acento);
+}
+
+.escondido{
+  display: none;
+}
+
+.categoria { 
+  font-size:0.9em; 
+  color: #888888; 
+  margin:4px 0; 
+}
+
+/* Tarjetas de Producto */
+.producto-card {
+  background-color: var(--color-tarjeta-fondo);
+  color: var(--color-tarjeta-texto);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+.producto-card h3 {
+  color: var(--color-acento); 
+}
+
+.producto-card a {
+  color: var(--color-tarjeta-texto);
+}

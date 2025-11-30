@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EpicPC Admin</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Administración de EpicPC</h1>
+        <a href="../index.html" class="btn-sitio-principal">Ver Sitio Principal</a>
+        <button onclick="logout()">Cerrar Sesión</button>
+    </header>
+
+    <div class="container">
+        <h2>Gestión de Productos</h2>
+        <div class="acciones">
+            <button onclick="mostrarFormularioCreacion()">Añadir Nueva PC</button>
+        </div>
+        
+        <div id="productFormContainer" style="display: none;">
+            <h3><span id="formTitle">Añadir</span> Producto</h3>
+            <form id="productForm">
+                <input type="hidden" id="product-id">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <select id="categoria" required>
+                    <option value="">Seleccionar Categoría</option>
+                    <option value="Aficionado">Aficionado</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Alto Rendimiento">Alto Rendimiento</option>
+                </select>
+                <input type="number" id="precio" placeholder="Precio" required>
+                <input type="text" id="urlImagen" placeholder="URL de Imagen">
+                <textarea id="descripcion" placeholder="Descripción"></textarea>
+                <button type="submit" id="submitButton" class="btn-categoria">Añadir Producto</button>
+                <button type="button" onclick="document.getElementById('productFormContainer').style.display='none'">Cancelar</button>
+            </form>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productos-tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/admin/dashboard.js" defer></script>
+</body>
+</html>

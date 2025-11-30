@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <script src="./js/productosService.js"></script> 
+    <script src="./js/cartService.js" defer></script>
+    <script src="./js/index.js" defer></script> <title>EpicPC - Tienda de PCs Gamer</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo" id="logo"></a>
+            
+            <div class="banner-title">
+                <h1>EpicPC - Tienda de PCs Gamer</h1>
+            </div>
+
+            <div>
+    <a href="./admin/login.html" class="btn-categoria" style="margin-right: 15px;">ADMIN</a></div>
+
+            <div>
+                <a href="./cart.html" id="cart"><img src="./img/iconos/shopping-cart.png" alt="Carrito de compras"><span id="cuenta-carrito">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    <section id="filtros-container">
+        <button id="todos" class="btn-categoria active">Ver Todos</button>
+        <button id="aficionado" class="btn-categoria">Aficionado</button>
+        <button id="intermedio" class="btn-categoria">Intermedio</button>
+        <button id="alto-rendimiento" class="btn-categoria">Alto Rendimiento</button>
+    </section>
+
+    <section id="productos-container">
+    </section>
+</main>
+    
+    <footer>
+        <p>Creado con amor por Calo de <a href="https://youtube.com/@puntoJson" target="_blank">puntoJson</a></p>
+        <p>¿Querés ver como lo hice? <a href="https://youtu.be/lduIpYA66mM" target="_blank">Entrá acá</a></p>
+    </footer>
+</body>
+</html>

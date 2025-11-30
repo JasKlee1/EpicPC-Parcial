@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | EpicPC</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="./admin.css"> 
+</head>
+<body class="login-page">
+    <div class="login-box">
+        <img src="../img/logo.png" alt="EpicPC Logo" style="width: 100px; margin-bottom: 20px;">
+        <h2>Acceso de Administrador</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario (admin)" required>
+            <input type="password" id="password" placeholder="Contraseña (1234)" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="../js/admin/login.js" defer></script>
+</body>
+</html>
